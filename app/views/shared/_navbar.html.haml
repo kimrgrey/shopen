@@ -1,0 +1,16 @@
+#main-nav.navbar.navbar-fixed-top
+  .container
+    %button{class: "btn btn-navbar", type: "button", data: {target: ".nav-collapse", toggle: "collapse"}}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %nav.nav-collapse.collapse{style: "height:0px"}
+      %ul.nav
+        %li.active
+          %a{href: "index.html"}= "Home"
+        %li
+          %a{href: "myaccount.html"}= "My Account"
+        %li
+          %a{href: "shopping-cart.html"}= "Shopping Cart"
+        %li
+          %a{href: "checkout.html"}= "Checkout"

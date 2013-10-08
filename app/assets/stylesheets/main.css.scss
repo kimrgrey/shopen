@@ -1,21 +1,67 @@
-body { 
-  font-family: 'Open Sans', calibri, Arial, Helvetica, sans-serif; 
-  font-size: 13px; 
-  line-height: 21px; 
-  color: #999999; 
+body {
+  color: #999999;
+  font-family: 'Open Sans',calibri,Arial,Helvetica,sans-serif;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+ul li {
+  list-style: none outside none;
 }
 
 a {
-  color: #666; 
+  color: #666666;
   text-decoration: none;
 }
 
-a:hover { 
-  text-decoration: none; 
-  color: #0787C4;
+a, a:hover, input, select, textarea, img, input:focus, select:focus, texarea:focus { 
+  transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
+  -webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+  -moz-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+  -ms-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+  -o-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+  transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
 }
 
-h1, h2, h3, h4, h5 { 
+.label, .badge {
+  color: #FFFFFF;
   font-weight: normal;
+  line-height: 14px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  vertical-align: baseline;
+  white-space: nowrap;
 }
 
+.label {
+  border-radius: 3px 3px 3px 3px;
+  padding: 1px 4px 2px;
+}
+
+.label-success, .badge-success {
+  background-color: #0787C4;
+}
+
+
+.carticon {
+  background: image-url("carticon.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  vertical-align: text-top;
+  width: 23px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.textright {
+  text-align: right;
+}
+
+.well {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: medium none;
+  padding: 10px;
+  box-shadow: none;
+}

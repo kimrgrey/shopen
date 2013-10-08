@@ -1,0 +1,15 @@
+#main-nav.navbar.navbar-fixed-top
+  .container
+    %button{class: "btn btn-navbar", type: "button", data: {target: ".nav-collapse", toggle: "collapse"}}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    
+    = render partial: 'shared/navbar/menu'
+    %ul.nav.pull-right
+      = render partial: 'shared/navbar/language'
+      = render partial: 'shared/navbar/currency'
+      = render partial: 'shared/navbar/cart'
+    
+          
+            

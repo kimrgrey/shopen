@@ -1,0 +1,14 @@
+%li.dropdown.hover.topcart
+  %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}
+    %i.carticon
+    Shopping Cart 
+    %span.label.label-success.font14= "1 item(s)"
+    = "- $589.50"
+    %b.caret
+  %ul.dropdown-menu.topcartopen
+    %li
+      = render partial: 'shared/navbar/cart/items'
+      = render partial: 'shared/navbar/cart/summary'
+      = render partial: 'shared/navbar/cart/actions'
+
+          

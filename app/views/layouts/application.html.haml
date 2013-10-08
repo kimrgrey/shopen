@@ -4,6 +4,9 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
     %title= content_for?(:title) ? yield(:title) : t('application_name')
     %meta{:content => content_for?(:description) ? yield(:description) : t('application_description'), :name => "description"}
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Droid+Serif'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Ubuntu'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800,700,300'
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
     = csrf_meta_tags

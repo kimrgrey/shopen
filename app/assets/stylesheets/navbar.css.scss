@@ -64,6 +64,18 @@
   }
 }
 
+.header-white {
+  padding: 80px 0 10px;
+
+  .topsearch {
+    margin: 10px 0 0;
+  }
+
+  .search-icon-top {
+    background: image-url("searchicon.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+  }
+}
+
 .navbar {
 
   .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {

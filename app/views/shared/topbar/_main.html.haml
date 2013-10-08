@@ -1,0 +1,14 @@
+.container
+  .row
+    .span4
+      %a.logo{href: "index.html"}
+        %img{src: image_url("logo.png"), alt: "ShopSimple", title:"ShopSimple"}
+    .span8
+      .row
+        .pull-right.logintext
+          Hey, welcome! Here you can
+          %a{href: "login.html"}="login"
+          or 
+          %a{href:"register.html"}= "create an account"
+      %form.form-search.marginnull.topsearch.pull-right
+        %input.input-xlarge.search-query.search-icon-top{type: "text", placeholder: 'Enter search here...'}

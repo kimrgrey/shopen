@@ -13,6 +13,9 @@ a {
   color: #666666;
   text-decoration: none;
 }
+a:hover { 
+  text-decoration:none; color:#0787C4
+}
 
 a, a:hover, input, select, textarea, img, input:focus, select:focus, texarea:focus { 
   transition: background-color 0.2s ease 0s, border 0.2s ease 0s, color 0.2s ease 0s, opacity 0.2s ease-in-out 0s;
@@ -64,4 +67,48 @@ a, a:hover, input, select, textarea, img, input:focus, select:focus, texarea:foc
   border: medium none;
   padding: 10px;
   box-shadow: none;
+}
+
+
+#maincontainer {
+  background: none repeat scroll 0 0 #FFFFFF;
+  padding: 40px 0 20px;
+}
+
+.breadcrumb {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+  .divider {
+    color: #CCCCCC;
+    padding: 0 5px;
+  }
+}
+
+section {
+  padding-top: 0;
+}
+
+h1 {
+  background: image-url("heading1bg.png") repeat-x scroll 0 17px rgba(0, 0, 0, 0);
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+  padding: 0 0 8px;
+  text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #666666;
+  font-weight: normal;
+}
+
+h1.headingfull span, h1 span {
+  background: image-url("spanheading.png") no-repeat scroll right center #FFFFFF;
+  color: #4B5B58;
+  padding: 10px 30px 13px 10px;
+}
+
+
+.flex-direction-nav a:before {
+  font-size: 20px;
 }

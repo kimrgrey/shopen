@@ -2,34 +2,5 @@
   .container
     %nav.subnav
       %ul.nav-pills.categorymenu
-        %li
-          %a.active{href: "index.html"}= "Home"
-        %li
-          %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}= "Products"
-          %div.dropdown-menu
-            %ul.arrow
-              %li
-                %a{href:"#"}
-                  = "Suits & shirts"
-                  = "(100)"
-              %li
-                %a{href:"#"}
-                  = "Shoes"
-                  = "(100)"
-              %li
-                %a{href:"#"}
-                  = "Suits & shirts"
-                  = "(100)"
-            %ul.arrow
-              %li
-                %a{href:"#"}
-                  = "Dresses"
-                  = "(100)"
-              %li
-                %a{href:"#"}
-                  = "Sun Glasses"
-                  = "(100)"
-              %li
-                %a{href:"#"}
-                  = "Jackets & Coats"
-                  = "(100)"
+        = render partial: 'shared/menu/home'
+        = render partial: 'shared/menu/products'

@@ -1,0 +1,130 @@
+.categorytitle {
+  margin: 0 0 35px;
+}
+
+a.prdocutname {
+  color: #0787C4;
+  display: block;
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 10px 0;
+  text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+
+.sale {
+  background: image-url("sale.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  display: block;
+  float: left;
+  height: 68px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 9999px;
+  top: 0;
+  width: 68px;
+}
+
+
+.oldprice {
+  color: #999999;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: line-through;
+}
+
+.newprice {
+  color: #0787C4;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.thumbnail {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px 4px 4px 4px;
+  display: block;
+  line-height: 1;
+  margin-top: 5px;
+  padding: 4px;
+  position: relative;
+}
+
+.thumbnail:hover { 
+  -webkit-box-shadow: 0 1px 4px rgba(54, 62, 71, 0.4); 
+  -moz-box-shadow: 0 1px 4px rgba(54, 62, 71, 0.4); 
+  box-shadow: 0 1px 4px rgba(54, 62, 71, 0.4); 
+}
+
+.thumbnail:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.thumbnail a > img {
+  display: block;
+  margin: 0 auto;
+}
+
+.thumbnail .caption {
+  padding: 9px;
+}
+
+.thumbnail .newprice {
+  background: none repeat scroll 0 0 #6A7274;
+  color: #FFFFFF;
+  display: block;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 2px 5px;
+}
+
+.thumbnail .cartadd {
+  background: image-url("cartadd.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+  cursor: pointer;
+  float: right;
+  height: 57px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 57px;
+}
+
+.thumbnail .links {
+  display: block;
+  margin-left: -5px;
+  padding: 10px 0;
+}
+
+.thumbnail a:hover, .links a:hover { 
+  color:#0787C4 
+}
+
+div.thumbnail:hover .cartadd { 
+  background-position: right 0 
+}
+
+.links a.info {
+  background-position: 0 0;
+}
+
+.links a.wishlist {
+  background-position: 0 -24px;
+}
+
+
+.thumbnail .links a.compare {
+  background-position: 0 -50px;
+}
+
+.links a {
+  background: image-url("productlinkicon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  line-height: 24px;
+  margin-right: 5px;
+  padding: 0 0 0 20px;
+}

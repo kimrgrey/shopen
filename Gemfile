@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 2.3.2'
 gem 'kaminari'
 gem 'flexslider'
+gem 'carrierwave'
 
 group :doc do
   gem 'sdoc', require: false

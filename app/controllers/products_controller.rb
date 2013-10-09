@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
   before_action :load_categories
-  
-  def index   
+  before_action :load_products
+
+  def show
+    @product = @products.find(params[:id])
   end
 
   private
@@ -9,5 +11,9 @@ class ProductsController < ApplicationController
   def load_categories
     @categories = Category.all
     @categories = @categories.order(:name)
+  end
+
+  def load_products
+    @products = Product.all
   end
 end

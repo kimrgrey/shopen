@@ -128,3 +128,72 @@ div.thumbnail:hover .cartadd {
   margin-right: 5px;
   padding: 0 0 0 20px;
 }
+
+
+#product {
+  margin-bottom: 20px;
+}
+
+h1.productname {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #0787C4;
+  font-size: 30px;
+  margin: 0 0 20px;
+}
+
+
+.productprice {
+  clear: both;
+  margin: 0 0 30px;
+}
+
+.proldprice {
+  color: #999999;
+  display: block;
+  float: left;
+  font-size: 30px;
+  line-height: 24px;
+  margin-right: 15px;
+  text-decoration: line-through;
+}
+
+.prnewprice {
+  color: #000000;
+  display: block;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+
+.quantitybox:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.quantitybox {
+  background: none repeat scroll 0 0 #F5F5F5;
+  border-radius: 4px 4px 4px 4px;
+  display: block;
+  margin: 40px 0;
+  padding: 15px 15px 8px;
+}
+
+.selectsize {
+  float: left;
+  margin-right: 10px;
+  width: 170px;
+}
+
+.selectqty {
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+}
+
+.productlinks {
+  float: left;
+  margin: 6px 0 0 10px;
+}

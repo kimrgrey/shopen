@@ -52,7 +52,7 @@
                   %a.prdocutname{href: product_path(product)}= product.name
                   .thumbnail
                     %span.sale= "Sale"
-                    %a{href: "product.html"}
+                    %a{href: product_path(product)}
                       %img{src: image_url("product-l1.jpg")}
                     .caption
                       .price.pull-left

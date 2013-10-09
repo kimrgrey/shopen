@@ -1,0 +1,28 @@
+%section#product
+  .container
+    .row
+      .span5
+      .span7
+        .row
+          .span7
+            %h1.productname
+              %span.bgnone= @product.name
+            .productprice
+              .proldprice= "$150.00"
+              .prnewprice= "$200.00"
+            .quantitybox
+              %select.selectsize
+                %option= "Select Size"
+                %option= "M"
+                %option= "S"
+                %option= "X"
+                %option= "XL"
+              %select.selectqty
+                %option= "Select color"
+                %option= "Red"
+                %option= "Blue"
+                %option= "Yellow"
+              %a.btn.btn-success.pull-left{href: "#"}= "Add to Cart"
+              .links.productlinks
+                %a.wishlist{href: "wishlist.html"}= "wishlist"
+                %a.compare{href: "compare.html"}= "compare"

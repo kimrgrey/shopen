@@ -1,0 +1,92 @@
+.row
+  .span7
+    %h1.productname
+      %span.bgnone= @product.name
+    .productprice
+      .proldprice= "$150.00"
+      .prnewprice= "$200.00"
+    .quantitybox
+      %a.btn.btn-success{href: "#"}= "Add to Cart"
+      .links.productlinks.pull-right
+        %a.wishlist{href: "wishlist.html"}= "wishlist"
+        %a.compare{href: "compare.html"}= "compare"
+    .productdesc
+      %ul#myTab.nav.nav-tabs
+        %li.active
+          %a{href: "#description", data: { toggle: 'tab'}}= "Description"
+        %li
+          %a{href: "#specification", data: { toggle: 'tab'}}= "Specification"
+        %li
+          %a{href: "#review", data: { toggle: 'tab'}}= "Review"
+      .tab-content
+        #description.tab-pane.active= @product.description
+        #specification.tab-pane
+          %ul.productinfo
+            %li
+              %span.productinfoleft= "Brand:"
+              = "Apple"
+            %li
+              %span.productinfoleft= "Availability:"
+              = "In Stock"
+        #review.tab-pane
+          %ul.reveiw
+            %li
+              %h4.title
+                = "Lorem Ipsum"
+                %span.date
+                  %i.icon-calendar
+                  = "August 28, 2012"
+              %ul.rate
+                %li.on
+                %li.on
+                %li.on
+                %li.off
+                %li.off
+              %span.reveiwdetails
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book
+            %li
+              %h4.title
+                = "Lorem Ipsum"
+                %span.date
+                  %i.icon-calendar
+                  = "August 28, 2012"
+              %ul.rate
+                %li.on
+                %li.on
+                %li.on
+                %li.off
+                %li.off
+              %span.reveiwdetails
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book
+            %li
+              %h4.title
+                = "Lorem Ipsum"
+                %span.date
+                  %i.icon-calendar
+                  = "August 28, 2012"
+              %ul.rate
+                %li.on
+                %li.on
+                %li.on
+                %li.off
+                %li.off
+              %span.reveiwdetails
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book
+          %h3= "Write a Review"
+          %form.form-vertical
+            %fieldset
+              .control-group
+                %label.control-label Text input
+                .controls
+                  %input.span6{:type => "text"}
+              .control-group
+                %label.control-label Textarea
+                .controls
+                  %textarea.span6{:rows => "10"}
+            %input.btn.btn-success{:type => "submit", :value => "continue"}

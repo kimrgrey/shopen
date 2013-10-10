@@ -178,7 +178,7 @@ h1.productname {
   border-radius: 4px 4px 4px 4px;
   display: block;
   margin: 40px 0;
-  padding: 15px 15px 8px;
+  padding: 15px 15px;
 }
 
 .selectsize {
@@ -194,6 +194,82 @@ h1.productname {
 }
 
 .productlinks {
-  float: left;
   margin: 6px 0 0 10px;
+}
+
+ul.productinfo {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+
+
+ul.productinfo li {
+  display: block;
+  list-style: none outside none;
+  padding: 5px 0;
+}
+
+ul.productinfo li .productinfoleft {
+  float: left;
+  font-weight: bold;
+  width: 160px;
+}
+
+ul.reveiw {
+  margin: 0;
+  padding: 0;
+}
+
+ul.reveiw li {
+  list-style: none outside none;
+}
+
+ul.reveiw > li {
+  border-bottom: 1px solid #E7E7E7;
+  margin-bottom: 22px;
+  padding: 5px 0 10px;
+}
+
+ul.reveiw li .title {
+    font-size: 20px;
+}
+
+
+ul.reveiw li .date {
+  float: right;
+  font-size: 14px;
+}
+
+ul.reveiw ul.rate {
+  margin: 10px 0;
+}
+
+ul.rate li {
+  background: image-url("rate.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  display: inline-block;
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+ul.rate li.on {
+  background-position: left top;
+}
+
+ul.rate li.off {
+  background-position: left -24px;
+}
+
+.product-image {
+  width: 600px;
+  border-color: #E7E7E7 #E7E7E7;
+  border-image: none;
+  border-radius: 3px 3px 3px 3px;
+  border-style: solid solid;
+  border-width: 1px 1px;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
 }

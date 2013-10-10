@@ -2,27 +2,28 @@
   .container
     .row
       .span5
+        %img{src: image_url("product1.jpg"), class: 'product-image'}
       .span7
-        .row
-          .span7
-            %h1.productname
-              %span.bgnone= @product.name
-            .productprice
-              .proldprice= "$150.00"
-              .prnewprice= "$200.00"
-            .quantitybox
-              %select.selectsize
-                %option= "Select Size"
-                %option= "M"
-                %option= "S"
-                %option= "X"
-                %option= "XL"
-              %select.selectqty
-                %option= "Select color"
-                %option= "Red"
-                %option= "Blue"
-                %option= "Yellow"
-              %a.btn.btn-success.pull-left{href: "#"}= "Add to Cart"
-              .links.productlinks
-                %a.wishlist{href: "wishlist.html"}= "wishlist"
-                %a.compare{href: "compare.html"}= "compare"
+        = render partial: 'products/info'
+%section#related
+  .container
+    %h1.headingfull
+      %span= "Related Products"
+    %section#thumbnails
+      %ul.thumbnails
+        - @related_products.each do |product|
+          %li.span3
+            %a.prdocutname{href: product_path(product)}= product.name
+            .thumbnail
+              %span.sale= "Sale"
+              %a{href: product_path(product)}
+                %img{src: image_url("product-l1.jpg")}
+              .caption
+                .price.pull-left
+                  %span.oldprice= "$2225.00"
+                  %span.newprice= "$2225.00"
+                %a.cartadd.pull-right= "Add to Cart"
+                .links.pull-left
+                  %a.info{href: product_path(product)}= "more"
+                  %a.wishlist{href: "wishlist.html"}= "wishlist"
+                  %a.compare{href: "compare.html"}= "compare"

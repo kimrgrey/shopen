@@ -1,6 +1,8 @@
 CATEGORIES_COUNT = 20
 PRODUCTS_COUNT = 100
 PHOTOS_COUNT = 5
+REVIEWS_COUNT = 10
+
 LOREMIPSUM = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ipsum neque. 
   Proin dignissim, nulla nec mollis auctor, risus tortor volutpat leo, in eleifend libero tortor vel nunc. Duis ut rutrum massa. 
@@ -52,6 +54,10 @@ progress = ProgressBar.create(:title => "Categories", :starting_at => 0, :total 
     [*1..PHOTOS_COUNT].each do |idx|
       photo = product.photos.build(name: "Photo #{idx}", description: LOREMIPSUM.sample)
       photo.save!
+    end
+    [*1..REVIEWS_COUNT].each do |idx|
+      review = product.reviews.build(title: "Review #{idx}", details: LOREMIPSUM.sample)
+      review.save!
     end
     product.save!
     progress.increment

@@ -29,55 +29,7 @@
               %span.productinfoleft= "Availability:"
               = "In Stock"
         #review.tab-pane
-          %ul.reveiw
-            %li
-              %h4.title
-                = "Lorem Ipsum"
-                %span.date
-                  %i.icon-calendar
-                  = "August 28, 2012"
-              %ul.rate
-                %li.on
-                %li.on
-                %li.on
-                %li.off
-                %li.off
-              %span.reveiwdetails
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book
-            %li
-              %h4.title
-                = "Lorem Ipsum"
-                %span.date
-                  %i.icon-calendar
-                  = "August 28, 2012"
-              %ul.rate
-                %li.on
-                %li.on
-                %li.on
-                %li.off
-                %li.off
-              %span.reveiwdetails
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book
-            %li
-              %h4.title
-                = "Lorem Ipsum"
-                %span.date
-                  %i.icon-calendar
-                  = "August 28, 2012"
-              %ul.rate
-                %li.on
-                %li.on
-                %li.on
-                %li.off
-                %li.off
-              %span.reveiwdetails
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book
+          = render partial: 'products/reviews'
           %h3= "Write a Review"
           %form.form-vertical
             %fieldset

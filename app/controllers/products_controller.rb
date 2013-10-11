@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
     @related_products = Product.all.limit(RELATED_PRODUCTS_COUNT)
     @product = @products.find(params[:id])
     @photos = @product.photos
+    @reviews = @product.reviews
   end
 
   private

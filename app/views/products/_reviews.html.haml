@@ -1,0 +1,16 @@
+%ul.reveiw
+  - @reviews.each do |review|
+    %li
+      %h4.title
+        = review.title
+        %span.date
+          %i.icon-calendar
+          = l review.created_at
+      %ul.rate
+        %li.on
+        %li.on
+        %li.on
+        %li.off
+        %li.off
+      %span.reveiwdetails
+        = review.details

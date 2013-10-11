@@ -2,7 +2,7 @@
   .container
     .row
       .span5
-        %img{src: image_url("product1.jpg"), class: 'product-image'}
+        = render partial: 'products/photos'
       .span7
         = render partial: 'products/info'
 %section#related

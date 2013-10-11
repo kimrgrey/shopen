@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   def show
     @related_products = Product.all.limit(RELATED_PRODUCTS_COUNT)
     @product = @products.find(params[:id])
+    @photos = @product.photos
   end
 
   private

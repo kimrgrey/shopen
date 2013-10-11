@@ -11,8 +11,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 2.3.2'
 gem 'kaminari'
-gem 'flexslider'
+gem 'rmagick'
 gem 'carrierwave'
+gem 'ruby-progressbar'
+
 
 group :doc do
   gem 'sdoc', require: false

@@ -11,15 +11,8 @@
         %h1.categorytitle
           %span= @category.name
 
-        #catergoryslider.flexslider.flexborder
-          %ul.slides
-            %li
-              %a{href: "#"}
-                %img{src: image_url("categorybanner1.jpg")}
-            %li
-              %a{href: "#"}
-                %img{src: image_url("categorybanner2.jpg")}
-
+        = render partial: 'categories/slider'
+        
         %section#latest
           .row
             .span12

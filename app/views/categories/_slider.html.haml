@@ -1,0 +1,21 @@
+#catergoryslider.carousel.slide
+  %ol.carousel-indicators
+    %li{"data-slide-to" => "0", "data-target" => "#catergoryslider", class: 'active'}
+    %li{"data-slide-to" => "1", "data-target" => "#catergoryslider"}
+  .carousel-inner
+    .item.active
+      %img{:src => image_url("categorybanner1.jpg")}
+      .carousel-caption
+        %h4= "Product name 1"
+        %p 
+          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. 
+          Nullam id dolor id nibh ultricies vehicula ut id elit.
+    .item
+      %img{:src => image_url("categorybanner2.jpg")}
+      .carousel-caption
+        %h4= "Product name 2"
+        %p 
+          Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. 
+          Nullam id dolor id nibh ultricies vehicula ut id elit.
+  %a.carousel-control.left{"data-slide" => "prev", :href => "#catergoryslider"} &lsaquo;
+  %a.carousel-control.right{"data-slide" => "next", :href => "#catergoryslider"} &rsaquo;

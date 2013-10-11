@@ -162,3 +162,7 @@ h1, h2, h3, h4, h5 {
     font-size: 12px;
   }
 }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%;
+}

@@ -1,4 +1,7 @@
-loremipsum = [
+CATEGORIES_COUNT = 20
+PRODUCTS_COUNT = 100
+PHOTOS_COUNT = 5
+LOREMIPSUM = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac ipsum neque. 
   Proin dignissim, nulla nec mollis auctor, risus tortor volutpat leo, in eleifend libero tortor vel nunc. Duis ut rutrum massa. 
   Ut pretium, nunc ac cursus congue, tellus tellus fermentum metus, a gravida libero tellus elementum nisi. 
@@ -39,11 +42,20 @@ loremipsum = [
 
 Category.delete_all
 Product.delete_all
+Photo.delete_all
 
-[*1...20].each do |idx|
+progress = ProgressBar.create(:title => "Categories", :starting_at => 0, :total => CATEGORIES_COUNT * PRODUCTS_COUNT)
+[*1..CATEGORIES_COUNT].each do |idx|
   category = Category.new(name: "Category #{idx.to_s.rjust(3, '0')}")
-  [*1...100].each do |idx|
-    category.products.build(name: "Product #{idx.to_s.rjust(3, '0')}", description: loremipsum.sample, price: 100.00, currency: 'RUB')
+  [*1..PRODUCTS_COUNT].each do |idx|
+    product = category.products.build(name: "Product #{idx.to_s.rjust(3, '0')}", description: LOREMIPSUM.sample, price: 100.00, currency: 'RUB')
+    [*1..PHOTOS_COUNT].each do |idx|
+      photo = product.photos.build(name: "Photo #{idx}", description: LOREMIPSUM.sample)
+      photo.save!
+    end
+    product.save!
+    progress.increment
   end
-  category.save
+  category.save!
 end
+progress.finish

@@ -1,0 +1,53 @@
+%section.login
+  .container
+    %ul.breadcrumb
+      %li
+        %a{:href => "#"} Home
+        %span.divider /
+      %li
+        %a{:href => "#"} Account
+        %span.divider /
+      %li.active Registation
+    .row
+      %h1.headingmain
+        %span Account Registration
+      %form.form-horizontal
+        %h3 Account Details
+        %p This information is required to create your account. Please, fill all fields below.
+        .registerbox
+          %fieldset
+            .control-group
+              %label.control-label
+                %span.red *
+                Email:
+              .controls
+                %input.input-xlarge{type: "text"}
+            .control-group
+              %label.control-label
+                %span.red *
+                Password
+              .controls
+                %input.input-xlarge{type: "text"}
+            .control-group
+              %label.control-label
+                %span.red *
+                Confirmation
+              .controls
+                %input.input-xlarge{type: "text"}
+        %h3 Personal Details
+        %p This information is optional, you can prodvide it later.
+        .registerbox
+          %fieldset
+            .control-group
+              %label.control-label
+                First Name:
+              .controls
+                %input.input-xlarge{type: "text"}
+            .control-group
+              %label.control-label
+                Last Name:
+              .controls
+                %input.input-xlarge{type: "text"}
+        .form-actions
+          %input{type: 'submit', value: 'Create account', class: 'btn btn-success'}
+          

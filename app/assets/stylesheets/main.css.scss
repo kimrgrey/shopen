@@ -75,6 +75,11 @@ a, a:hover, input, select, textarea, img, input:focus, select:focus, texarea:foc
   padding: 40px 0 20px;
 }
 
+ol.carousel-indicators > li {
+  background-color: #0787C4;
+  opacity: 0.85;
+}
+
 .breadcrumb {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 

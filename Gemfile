@@ -14,7 +14,7 @@ gem 'kaminari'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'ruby-progressbar'
-
+gem 'devise'
 
 group :doc do
   gem 'sdoc', require: false

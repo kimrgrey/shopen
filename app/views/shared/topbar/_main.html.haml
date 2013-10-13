@@ -9,8 +9,8 @@
       .row
         .pull-right.logintext
           Hey, welcome! Here you can
-          %a{href: "login.html"}="login"
+          %a{href: new_user_session_path}="login"
           or 
-          %a{href:"register.html"}= "create an account"
+          %a{href: new_user_registration_path}= "create an account"
       %form.form-search.marginnull.topsearch.pull-right
         %input.input-xlarge.search-query.search-icon-top{type: "text", placeholder: 'Enter search here...'}

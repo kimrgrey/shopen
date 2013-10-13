@@ -1,18 +1,18 @@
-.newcustomer {
-  margin-left: 5%;
-}
-
-.newcustomer, .returncustomer {
-  margin-top: 20px;
-  border: 1px solid #E7E7E7;
-  border-radius: 5px 5px 5px 5px;
-  float: left;
-  padding: 15px 20px;
-  width: 40%;
-
+.login-form {
+  border-right: 1px solid #E7E7E7;
+  padding-right: 10px;
+  
   .form-actions {
-    margin-right: 80px;
-    border: none;
-    background-color: #FFFFFF;
+    background-color: #FFF;
+    border-top: none;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .devise-links {
+    text-align: right;
+
+    a.devise-link {
+      display: block;
+    }
   }
 }

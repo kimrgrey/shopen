@@ -12,29 +12,8 @@
       .span12
         %h1.headingmain
           %span Account Login
-        %section.returncustomer
-          %h2 Returning Customer
-          .loginbox
-            %form.form-vertical
-              %fieldset
-                .control-group
-                  %label.control-label E-Mail Address:
-                  .controls
-                    %input.span4{type: "text"}
-                .control-group
-                  %label.control-label Password:
-                  .controls
-                    %input.span4{type: "text"}
-                %a.btn.btn-success{href: "#"} Login
-                .pull-right
-                  %a{href: "#"} Forgot your password?
-        %section.newcustomer
-          %h2 New Customer
-          .loginbox
-            %h4 Register Account
-            %p 
-              By creating an account you will be able to shop faster, be up to date on an order's status, 
-              and keep track of the orders you have previously made.
-            %p
-              %a.btn.btn-success{href: "#"}= "Continue"
-        
+      .row 
+        .span6.login-form
+          = render partial: 'devise/sessions/login'
+        .span6
+          = render partial: 'devise/sessions/registration'

@@ -16,6 +16,9 @@
   = render partial: 'shared/header'
   
   #maincontainer
+    .row
+      .offset2.span10
+        = bootstrap_flash
     = yield
 
   = render partial: 'shared/footer'

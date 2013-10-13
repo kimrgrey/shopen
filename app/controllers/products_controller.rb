@@ -3,9 +3,10 @@ class ProductsController < ApplicationController
   before_action :load_products
 
   RELATED_PRODUCTS_COUNT = 10
-  
-  def index
 
+  def index
+    @products = @products.order(:name)
+    @products = @products.page(params[:page]).per(params[:per])
   end
   
   def show

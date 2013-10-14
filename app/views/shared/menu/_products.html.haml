@@ -1,7 +1,7 @@
 %li
   %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}= "Products"
   %div.dropdown-menu
-    - @categories.in_groups_of(5, false) do |group|
+    - @categories_for_menu.in_groups_of(5, false) do |group|
       %ul.arrow
         - group.each do |category|
           %li

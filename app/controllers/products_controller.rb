@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :load_categories
   before_action :load_products
 
   RELATED_PRODUCTS_COUNT = 10
@@ -18,11 +17,6 @@ class ProductsController < ApplicationController
   end
 
   private
-
-  def load_categories
-    @categories = Category.all
-    @categories = @categories.order(:name)
-  end
 
   def load_products
     @products = Product.all

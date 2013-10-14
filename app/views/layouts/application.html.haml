@@ -12,13 +12,14 @@
     = csrf_meta_tags
     = yield(:head)
   %body
+    = render partial: 'shared/header'
+    
+    #maincontainer
+      .row
+        .offset2.span10
+          = bootstrap_flash
+      = yield
 
-  = render partial: 'shared/header'
-  
-  #maincontainer
-    .row
-      .offset2.span10
-        = bootstrap_flash
-    = yield
+    = render partial: 'shared/footer'
 
-  = render partial: 'shared/footer'
+    = image_tag 'preloader.gif', id: 'preloader', class: 'hidden'

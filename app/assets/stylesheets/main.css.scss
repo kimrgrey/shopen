@@ -5,6 +5,13 @@ body {
   line-height: 21px;
 }
 
+#preloader {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 10000;
+}
+
 ul li {
   list-style: none outside none;
 }

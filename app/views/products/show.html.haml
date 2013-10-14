@@ -10,20 +10,4 @@
     %h1.headingfull
       %span= "Related Products"
     %section#thumbnails
-      %ul.thumbnails
-        - @related_products.each do |product|
-          %li.span3
-            %a.prdocutname{href: product_path(product)}= product.name
-            .thumbnail
-              %span.sale= "Sale"
-              %a{href: product_path(product)}
-                %img{src: image_url("product-l1.jpg")}
-              .caption
-                .price.pull-left
-                  %span.oldprice= "$2225.00"
-                  %span.newprice= "$2225.00"
-                %a.cartadd.pull-right= "Add to Cart"
-                .links.pull-left
-                  %a.info{href: product_path(product)}= "more"
-                  %a.wishlist{href: "wishlist.html"}= "wishlist"
-                  %a.compare{href: "compare.html"}= "compare"
+      = render partial: 'products/grid', locals: {products: @related_products}

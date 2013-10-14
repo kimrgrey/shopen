@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   RELATED_PRODUCTS_COUNT = 10
 
   def index
+    params[:view_mode] ||= 'grid'
     @products = @products.order(:name)
     @products = @products.page(params[:page]).per(params[:per])
   end

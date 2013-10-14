@@ -2,6 +2,7 @@ class CategoriesController < ApplicationController
   before_action :load_categories
 
   def show
+    params[:view_mode] ||= 'grid'
     @category = @categories.find(params[:id])
     @products = @category.products
     @products = @products.order(:name)

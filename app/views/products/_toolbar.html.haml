@@ -1,0 +1,22 @@
+.row
+  .span12
+    .sorting.well
+      %form.form-inline.pull-left
+        Sort by:
+        %select.span2
+          %option= "Default"
+          %option= "Name"
+          %option= "Pirce"
+          %option= "Rating"
+          %option= "Color"
+        &nbsp;&nbsp;
+        Show:
+        %select.span1
+          %option= "10"
+          %option= "20"
+          %option= "30"
+          %option= "40"
+          %option= "50"
+      .btn-group.pull-right
+        = view_mode_item 'list', url_for(params.merge(view_mode: 'list')), 'icon-th-list', params[:view_mode] == 'list'
+        = view_mode_item 'grid', url_for(params.merge(view_mode: 'grid')), 'icon-th', params[:view_mode] == 'grid'

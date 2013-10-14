@@ -1,2 +1,9 @@
 .container
-  = render partial: 'products/grid'
+  = render partial: 'products/toolbar'
+  %section#latest
+    - if params[:view_mode] == 'grid'
+      = render partial: 'products/grid', locals: {products: @products}
+    - else
+      = render partial: 'products/list', locals: {products: @products}
+    .pull-right
+      = paginate @products

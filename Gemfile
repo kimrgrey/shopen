@@ -15,6 +15,7 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'ruby-progressbar'
 gem 'devise'
+gem 'haml_coffee_assets'
 
 group :doc do
   gem 'sdoc', require: false

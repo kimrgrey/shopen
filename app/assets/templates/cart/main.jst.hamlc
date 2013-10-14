@@ -7,8 +7,6 @@
     %b.caret
   %ul.dropdown-menu.topcartopen
     %li
-      = render partial: 'shared/navbar/cart/items'
-      = render partial: 'shared/navbar/cart/summary'
-      = render partial: 'shared/navbar/cart/actions'
-
-          
+      != JST['cart/items']()
+      != JST['cart/summary']()
+      != JST['cart/actions']()

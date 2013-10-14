@@ -20,4 +20,17 @@ module BootstrapHelper
     end
     flash_messages.join("\n").html_safe
   end
+
+  def breadcrumb(*opts)
+    devider = content_tag(:span, '/', class: 'divider')
+    tags = opts.map do |opt|
+      if opt.size > 1 
+        content_tag(:li, content_tag(:a, opt.last, href: opt.first) + devider)  
+      else
+        content_tag(:li, opt.first, class: 'active')
+      end
+      
+    end
+    content_tag(:ul, raw(tags.join), class: 'breadcrumb')
+  end
 end

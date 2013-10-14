@@ -1,17 +1,7 @@
 %section#login
   .container
-    %ul.breadcrumb
-      %li
-        %a{:href => "#"} Home
-        %span.divider /
-      %li
-        %a{:href => "#"} Account
-        %span.divider /
-      %li.active Login
-    .row
-      .span12
-        %h1.headingmain
-          %span Account Login
+    = breadcrumb [root_path, 'Home'], ['Login']
+    = main_page_header "Account Login"
     .row 
       .span6.login-form
         = render partial: 'devise/sessions/login'

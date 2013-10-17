@@ -42,6 +42,7 @@ LOREMIPSUM = [
   Etiam feugiat metus quis neque adipiscing, eget ultrices augue placerat."
 ]
 
+User.delete_all
 Category.delete_all
 Product.delete_all
 Photo.delete_all

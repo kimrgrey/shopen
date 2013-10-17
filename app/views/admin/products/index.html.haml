@@ -1,0 +1,15 @@
+.container
+  %table.table.table-bordered
+    %thead
+      %tr
+        %th= "#"
+        %th= "Name"
+        %th= "Description"
+    %tbody
+      - @products.each do |product|
+        %tr
+          %td.small= product.id
+          %td= product.name
+          %td.medium= product.description
+  .pull-right
+    = paginate @products

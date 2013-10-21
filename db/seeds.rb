@@ -51,7 +51,7 @@ progress = ProgressBar.create(:title => "Categories", :starting_at => 0, :total 
 [*1..CATEGORIES_COUNT].each do |idx|
   category = Category.new(name: "Category #{idx.to_s.rjust(3, '0')}")
   [*1..PRODUCTS_COUNT].each do |idx|
-    product = category.products.build(name: "Product #{idx.to_s.rjust(3, '0')}", description: LOREMIPSUM.sample, price: 100.00, currency: 'RUB')
+    product = category.products.build(name: "Product #{idx.to_s.rjust(3, '0')}", description: LOREMIPSUM.sample)
     [*1..PHOTOS_COUNT].each do |idx|
       photo = product.photos.build(name: "Photo #{idx}", description: LOREMIPSUM.sample)
       photo.save!

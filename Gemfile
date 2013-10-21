@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'ruby-progressbar'
 gem 'devise'
 gem 'haml_coffee_assets'
+gem 'money-rails'
 
 group :doc do
   gem 'sdoc', require: false

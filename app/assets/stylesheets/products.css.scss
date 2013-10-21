@@ -122,6 +122,19 @@ div.thumbnail:hover .cartadd {
   background-position: 0 -50px;
 }
 
+.thumbnail .admin-links {
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  a {
+    margin-right: 10px;
+    width: 45px;
+  }
+}
+
 .links a {
   background: image-url("productlinkicon.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   line-height: 24px;

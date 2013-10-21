@@ -1,15 +1,11 @@
 .container
-  %table.table.table-bordered
-    %thead
-      %tr
-        %th= "#"
-        %th= "Name"
-        %th= "Description"
-    %tbody
-      - @products.each do |product|
-        %tr
-          %td.small= product.id
-          %td= product.name
-          %td.medium= product.description
+  
+  .btn-toolbar
+    %a.btn.btn-success{href: new_admin_product_path}= 'New'
+    .pull-right
+      = render partial: 'admin/shared/search'
+
+  = render partial: 'products/list', locals: { products: @products, admin: true }
+  
   .pull-right
     = paginate @products

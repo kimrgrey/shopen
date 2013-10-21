@@ -8,7 +8,7 @@ Shopen::Application.routes.draw do
   end
 
   resources :categories
-  resources :products
+  resources :products, only: [:index, :show]
 
   root to: 'products#index'
 end

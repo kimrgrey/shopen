@@ -1,3 +1,4 @@
+- admin = false if admin.nil?
 %ul.thumbnails.list
   - @products.each do |product|
     %li.span12
@@ -6,13 +7,20 @@
         .row
           %a.span3{href: product_path(product)}
             %img{src: image_path("product-l1.jpg")}
-          .details.span6= product.description
-          .caption
-            .price.pull-right
-              %span.oldprice $2225.00
-              %span.newprice $2225.00
-            %a.cartadd.pull-right.tooltip-test{"data-original-title" => "Add to Cart"} Add to Cart
-            %span.links.pull-right
-              %a.info{href: "product.html"} info
-              %a.wishlist{href: "wishlist.html"} wishlist
-              %a.compare{href: "compare.html"} compare
+          .details{class: (admin ? 'span9': 'span6')}= product.description
+          - if admin
+            .admin-links
+              %a.pull-right.btn.btn-success{href: edit_admin_product_path(product)}
+                %i.icon-edit
+              %a.pull-right.btn.btn-success{href: admin_product_path(product)}
+                %i.icon-info
+          - else
+            .caption
+              .price.pull-right
+                %span.oldprice $2225.00
+                %span.newprice $2225.00
+              %a.cartadd.pull-right.tooltip-test{"data-original-title" => "Add to Cart"} Add to Cart
+              %span.links.pull-right
+                %a.info{href: "product.html"} info
+                %a.wishlist{href: "wishlist.html"} wishlist
+                %a.compare{href: "compare.html"} compare

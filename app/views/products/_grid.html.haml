@@ -7,12 +7,7 @@
         %a{href: product_path(product)}
           %img{src: image_url("product-l1.jpg")}
         .caption
-          .price.pull-left
-            - if product.has_discount?
-              %span.oldprice= humanized_money_with_symbol(product.base_price)
-              %span.newprice= humanized_money_with_symbol(product.discount_price)
-            - else
-              %span.newprice= humanized_money_with_symbol(product.base_price)
+          .price.pull-left= product_price(product)
           %a.cartadd.pull-right= "Add to Cart"
           .links.pull-left
             %a.info{href: product_path(product)}= "more"

@@ -16,10 +16,8 @@
                 %i.icon-info
           - else
             .caption
-              .price.pull-right
-                %span.oldprice $2225.00
-                %span.newprice $2225.00
-              %a.cartadd.pull-right.tooltip-test{"data-original-title" => "Add to Cart"} Add to Cart
+              .price.pull-right= product_price(product)
+              %a.cartadd.pull-right Add to Cart
               %span.links.pull-right
                 %a.info{href: "product.html"} info
                 %a.wishlist{href: "wishlist.html"} wishlist

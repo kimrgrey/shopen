@@ -3,13 +3,12 @@ class Product < ActiveRecord::Base
   
   has_many :photos
   has_many :reviews
-  has_many :sales
+  has_many :discounts
 
-  def sale?
-    sales.where('sales.start_at > :d AND sales.end_at <= :d', Date.today).any?
-  end
+  monetize :base_price_kopeks
+  monetize :discount_price_kopeks
 
-  def sale
-    sales.where('sales.start_at > :d AND sales.end_at <= :d', Date.today).first
+  def has_discount?
+    discounts.active.any?
   end
 end

@@ -3,9 +3,8 @@
     %li.span3
       %a.prdocutname{href: product_path(product)}= product.name
       .thumbnail
-        %span.sale= "Sale"
-        %a{href: product_path(product)}
-          %img{src: image_url("product-l1.jpg")}
+        = product_sale_ribbon(product) if product.has_discount?
+        = product_image(product)
         .caption
           .price.pull-left= product_price(product)
           %a.cartadd.pull-right= "Add to Cart"

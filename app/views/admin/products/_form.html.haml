@@ -1,39 +1,20 @@
-= form_for [:admin, product], html: {class: 'form-horizontal'} do |f|
+= simple_form_for [:admin, @product], html: {class: 'form-horizontal' } do |f|
   .row
     .span8
-      %h3 Required Information
-      %p This information is required to create new product. Please, fill all fields below.
-      .registerbox
-        %fieldset
-          .control-group
-            = f.label :name, {class: 'control-label'}
-            .controls
-              = f.text_field :name, class: 'input-xxlarge'
-          .control-group
-            = f.label :price, {class: 'control-label'}
-            .controls
-              = f.text_field :name, class: 'input-xlarge'
-          .control-group
-            = f.label :currency, {class: 'control-label'}
-            .controls
-              %select{class: 'input-xlarge'}
-                %option{value: 'RUB'}= 'RUB'
-                %option{value: 'USD'}= 'USD'
-                %option{value: 'EUR'}= 'EUR'
-          .control-group
-            = f.label :category, {class: 'control-label'}
-            .controls
-              = f.collection_select(:category_id, @categories, :id, :name, {}, class: 'input-xlarge')
-      %h3 Additional Details
-      %p This information is optional, you can prodvide it later.
-      .registerbox
-        %fieldset
-          .control-group
-            = f.label :description, {class: 'control-label'}
-            .controls
-              = f.text_area :description, rows: 10, class: 'input-xxlarge'
+      = form_fieldset_header 'Required Information', 'This information is required to create new product. Please, fill all fields below.'
+      %fieldset
+        = f.input :name, input_html: {class: 'input-xlarge'}
+        = f.input :base_price_kopeks, input_html: {class: 'input-xlarge'}
+        = f.association :category, collection: @categories, input_html: {class: 'input-xlarge'}
+      
+      = form_fieldset_header 'Additional Details', 'This information is optional, you can prodvide it later.'
+      %fieldset
+        = f.input :description, input_html: {class: 'input-xxlarge', rows: 15}
+    
     .span4
       %img{src: image_path('product1.jpg')}
+    
     .clearfix
+    
     .form-actions
-      = f.submit 'Save', class: 'btn btn-success'
+      = f.button :submit, 'Save', class: ['btn-success']

@@ -18,6 +18,8 @@ gem 'ruby-progressbar'
 gem 'devise'
 gem 'haml_coffee_assets'
 gem 'money-rails'
+gem 'simple_form'
+gem 'country_select'
 
 group :doc do
   gem 'sdoc', require: false

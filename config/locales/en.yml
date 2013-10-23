@@ -1,3 +1,24 @@
 en:
   application_name: 'Shopen'
   application_description: 'Social marketing platform'
+  admin:
+    products:
+      index:
+        new: 'New'
+      new:
+        page_header: 'New product'
+      edit:
+        page_header: 'Edit product'
+      form: 
+        required_info_title: 'Required Information'
+        required_info_description: 'This information is required to create new product. Please, fill all fields below.'
+        additional_details_title: 'Additional Details'
+        additional_details_description: 'This information is optional, you can prodvide it later.'
+  activerecord:
+    attributes:
+      product:
+        name: 'Name'
+        description: 'Description'
+        base_price_kopeks: 'Price in kopeks'
+        category_id: 'Category'
+        category: 'Category'

@@ -1,20 +1,15 @@
-= simple_form_for [:admin, @product], html: {class: 'form-horizontal' } do |f|
+= simple_form_for [:admin, product], html: {class: 'form-horizontal' } do |f|
   .row
     .span8
-      = form_fieldset_header 'Required Information', 'This information is required to create new product. Please, fill all fields below.'
+      = form_fieldset_header t('.required_info_title'), t('.required_info_description')
       %fieldset
         = f.input :name, input_html: {class: 'input-xlarge'}
         = f.input :base_price_kopeks, input_html: {class: 'input-xlarge'}
-        = f.association :category, collection: @categories, input_html: {class: 'input-xlarge'}
-      
-      = form_fieldset_header 'Additional Details', 'This information is optional, you can prodvide it later.'
+        = f.association :category, collection: categories, input_html: {class: 'input-xlarge'}
+      = form_fieldset_header t('.additional_details_title'), t('.additional_details_description')
       %fieldset
-        = f.input :description, input_html: {class: 'input-xxlarge', rows: 15}
-    
+        = f.input :description, input_html: {class: 'input-xxlarge', rows: text_area_rows_count}
     .span4
       %img{src: image_path('product1.jpg')}
-    
-    .clearfix
-    
-    .form-actions
-      = f.button :submit, 'Save', class: ['btn-success']
+  .row.form-actions
+    = f.button :submit, 'Save', class: ['btn-success']

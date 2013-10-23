@@ -1,7 +1,7 @@
 %section#login
   .container
-    = breadcrumb [root_path, 'Home'], ['Login']
-    = main_page_header "Account Login"
+    = breadcrumb [t('size.sections.home'), root_path], t('site.sections.login')
+    = main_page_header t('.page_header')
     .row 
       .span6.login-form
         = render partial: 'devise/sessions/login'

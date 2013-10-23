@@ -23,11 +23,11 @@ module BootstrapHelper
 
   def breadcrumb(*opts)
     devider = content_tag(:span, '/', class: 'divider')
-    tags = opts.map do |opt|
-      if opt.size > 1 
-        content_tag(:li, content_tag(:a, opt.last, href: opt.first) + devider)  
+    tags = opts.map do |title, path|
+      if path
+        content_tag(:li, content_tag(:a, title, href: path) + devider)  
       else
-        content_tag(:li, opt.first, class: 'active')
+        content_tag(:li, title, class: 'active')
       end
       
     end

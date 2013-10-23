@@ -1,66 +1,38 @@
 %form.form-horizontal
   .row
     .span6
-      %h3 Account Information
-      %p This information is required to create your account. Please, fill all fields below.
-      .registerbox
-        %fieldset
-          .control-group
-            %label.control-label
-              %span.red *
-              Email:
-            .controls
-              %input.input-xlarge{type: "text"}
-          .control-group
-            %label.control-label
-              %span.red *
-              Password
-            .controls
-              %input.input-xlarge{type: "text"}
-          .control-group
-            %label.control-label
-              %span.red *
-              Confirmation
-            .controls
-              %input.input-xlarge{type: "text"}
-      %h3 Personal Details
-      %p This information is optional, you can prodvide it later.
-      .registerbox
-        %fieldset
-          .control-group
-            %label.control-label
-              First Name:
-            .controls
-              %input.input-xlarge{type: "text"}
-          .control-group
-            %label.control-label
-              Last Name:
-            .controls
-              %input.input-xlarge{type: "text"}
-      %h3 Delivery Address
-      %p This information is optional, you can prodvide it later.
-      .registerbox
-        %fieldset
-          .control-group
-            %label.control-label
-              Country
-            .controls
-              %input.input-xlarge{type: "text"}
-          .control-group
-            %label.control-label
-              City
-            .controls
-              %input.input-xlarge{type: "text"}
-          .control-group
-            %label.control-label
-              Address
-            .controls
-              %input.input-xlarge{type: "text"}
-          .control-group
-            %label.control-label
-              Postal code
-            .controls
-              %input.input-xlarge{type: "text"}
+      = form_fieldset_header t('.account_info_title'), t('.account_info_description')
+      %fieldset
+        .control-group
+          %label.control-label
+            %span.red *
+            Email:
+          .controls
+            %input.input-xlarge{type: "text"}
+        .control-group
+          %label.control-label
+            %span.red *
+            Password
+          .controls
+            %input.input-xlarge{type: "text"}
+        .control-group
+          %label.control-label
+            %span.red *
+            Confirmation
+          .controls
+            %input.input-xlarge{type: "text"}
+      = form_fieldset_header t('.personal_details_title'), t('.personal_details_description')
+      %fieldset
+        .control-group
+          %label.control-label
+            First Name:
+          .controls
+            %input.input-xlarge{type: "text"}
+        .control-group
+          %label.control-label
+            Last Name:
+          .controls
+            %input.input-xlarge{type: "text"}
     .span6
       %img{src: image_path('product1.jpg')}
     .clearfix

@@ -1,5 +1,5 @@
 %section.login
   .container
-    = breadcrumb [root_path, 'Home'], ['Registration']
-    = main_page_header 'Account Registration'
+    = breadcrumb [t('site.sections.home'), root_path], t('site.sections.registration')
+    = main_page_header t('.page_header')
     = render partial: 'devise/registrations/form'

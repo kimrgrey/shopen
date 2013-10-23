@@ -1,6 +1,11 @@
 en:
   application_name: 'Shopen'
   application_description: 'Social marketing platform'
+  site:
+    sections:
+      home: 'Home'
+      regisration: 'Registration'
+      login: 'Login'
   admin:
     products:
       index:
@@ -14,6 +19,18 @@ en:
         required_info_description: 'This information is required to create new product. Please, fill all fields below.'
         additional_details_title: 'Additional Details'
         additional_details_description: 'This information is optional, you can prodvide it later.'
+  devise:
+    registrations:
+      new: 
+        page_header: 'Account Registration'
+      form:
+        account_info_title: 'Account Information'
+        account_info_description: 'This information is required to create your account. Please, fill all fields below.'
+        personal_details_title: 'Personal Details'
+        personal_details_description: 'This information is optional, you can prodvide it later.'
+    sessions:
+      new:
+        page_header: 'Account Login'
   activerecord:
     attributes:
       product:

@@ -33,6 +33,22 @@ en:
     sessions:
       new:
         page_header: 'Account Login'
+      login:
+        returning_customer: 'Returning Customer'
+        submit: 'Login'
+      registration:
+        new_customer: 'New Customer'
+        register_account: 'Register Account'
+        message: 'By creating an account you will be able to shop faster, be up to date on an status of order, and keep track of the orders you have previously made.'
+        sign_up: 'Do you want to sign up?'
+    shared:
+      links:
+        sign_in: 'Do you want to sign in?'
+        sign_up: 'Do you want to sign up?'
+        forget_password: 'Do you forget password?'
+        confirmation_instructions: "Didn't receive confirmation instructions?"
+        unlock_instructions: "Didn't receive unlock instructions?"
+        sign_in_with: "Sign in with %{provider}"
   activerecord:
     attributes:
       product:

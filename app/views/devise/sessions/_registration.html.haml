@@ -1,7 +1,6 @@
-%h2 New Customer
+%h2= t('.new_customer')
 .loginbox
-  %h4 Register Account
+  %h4= t('.register_account')
   %p 
-    By creating an account you will be able to shop faster, be up to date on an order's status, 
-    and keep track of the orders you have previously made.
-    %a{href: new_user_registration_path}= "Do you want to sign up?"
+    = t('.message')
+    %a{href: new_user_registration_path}= t('.sign_up')

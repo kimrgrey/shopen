@@ -1,5 +1,5 @@
 %li
-  %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}= "Products"
+  %a.dropdown-toggle{href: categories_path, data: {toggle: "dropdown"}}= t('.categories')
   %div.dropdown-menu
     - @categories_for_menu.in_groups_of(5, false) do |group|
       %ul.arrow

@@ -23,6 +23,11 @@ en:
         additional_details_title: 'Additional Details'
         additional_details_description: 'This information is optional, you can prodvide it later.'
   shared:
+    menu:
+      home: 
+        home: 'Home'
+      categories:
+        categories: 'Categories'
     topbar:
       main:
         home: 'Home'

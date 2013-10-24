@@ -8,6 +8,7 @@ en:
       home: 'Home'
       registration: 'Registration'
       login: 'Login'
+      account: 'Account'
   admin:
     products:
       index:
@@ -22,6 +23,17 @@ en:
         required_info_description: 'This information is required to create new product. Please, fill all fields below.'
         additional_details_title: 'Additional Details'
         additional_details_description: 'This information is optional, you can prodvide it later.'
+  users:
+    show:
+      page_header: 'Account Information'
+      account: 'Account'
+      edit_account_info: 'Do you want to edit account information?'
+      change_password: 'Do you want to change password?'
+      modify_address_book: 'Do you want to modify your address book entries?'
+      modify_wish_list: 'Do you want to modify your wish list?'
+      orders: 'Orders'
+      order_history: 'Do you want to view your order history?'
+      discussions: 'Do you want to view discussions history?'
   shared:
     menu:
       home: 

@@ -1,0 +1,24 @@
+%section#account-info
+  .container
+    = breadcrumb [t('site.sections.home'), root_path], t('site.sections.account')
+    = main_page_header t('.page_header')
+    
+    %h3= t('.account')
+    .accountbox
+      %ul
+        %li
+          %a{:href => "#"}= t('.edit_account_info')
+        %li
+          %a{:href => "#"}= t('.change_password')
+        %li
+          %a{:href => "#"}= t('.modify_address_book')
+        %li
+          %a{:href => "#"}= t('.modify_wish_list')
+    
+    %h3= t('.orders')
+    .accountbox
+      %ul
+        %li
+          %a{:href => "#"}= t('.order_history')
+        %li
+          %a{:href => "#"}= t('.discussions')

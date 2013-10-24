@@ -1,6 +1,8 @@
 en:
-  application_name: 'Shopen'
-  application_description: 'Social marketing platform'
+  application:
+    name: 'Shopen'
+    description: 'Social marketing platform'
+    version: 'v2.0'
   site:
     sections:
       home: 'Home'

@@ -1,0 +1,81 @@
+ru:
+  application:
+    name: 'Shopen'
+    description: 'Платформа для маркетинга в социальных сетях'
+    version: 'Версия 2.0'
+  site:
+    sections:
+      home: 'Главная'
+      registration: 'Регистрация'
+      login: 'Вход'
+  admin:
+    products:
+      index:
+        new: 'Создать'
+      new:
+        page_header: 'Новый товар'
+      edit:
+        page_header: 'Редактирование товара'
+      form: 
+        submit: 'Сохранить'
+        required_info_title: 'Базовая информация'
+        required_info_description: 'Эта информация необходима для создания товара. Пожалуйста, заполните все поля, представленные ниже.'
+        additional_details_title: 'Дополнительная информация'
+        additional_details_description: 'Эта информация не является необходимой, но было бы полезно предоставить ее покупателям, хотя это и можно сделать позднее.'
+  shared:
+    menu:
+      home: 
+        home: 'Главная'
+      categories:
+        categories: 'Категории'
+    navbar:
+      menu:
+        home: 'Главная'
+        shop: 'Магазин'
+        account: 'Аккаунт'
+        sign_in: 'Войти'
+        sign_up: 'Зарегистрироваться'
+        sign_out: 'Выйти'
+  devise:
+    registrations:
+      new: 
+        page_header: 'Регистрация аккаунта'
+      form:
+        submit: 'Создание нового аккаунта'
+        account_info_title: 'Базовая информация'
+        account_info_description: 'Эта информация необходима, чтобы создать ваш аккаунт. Пожалуйста, заполните все поля, представленные ниже.'
+        personal_details_title: 'Персональная информация'
+        personal_details_description: 'Нам было бы удобнее сотрудничать, если бы вы рассказали немного о себе, но это можно сделать и позднее.'
+    sessions:
+      new:
+        page_header: 'Вход на сайт'
+      login:
+        returning_customer: 'Мы рады вашему возвращению!'
+        submit: 'Вход'
+      registration:
+        new_customer: 'У вас еще нет аккаунта?'
+        register_account: 'Регистрация'
+        message: 'Создав аккаунт, вы получите возможность совершать покупки гораздно быстрее, отслеживать статус заказа и получать различные скидки и бонусы. Присоединяйтесь!'
+        sign_up: 'Как насчет регистрации?'
+    shared:
+      links:
+        sign_in: 'Хотите войти на сайт?'
+        sign_up: 'Хотите пройти регистрацию?'
+        forget_password: 'Забыли ваш пароль?'
+        confirmation_instructions: "Не получили инструкции по активации аккаунта?"
+        unlock_instructions: "Не получили инструкции по разблокировке аккаунта?"
+        sign_in_with: "Войти при помощи %{provider}"
+  activerecord:
+    attributes:
+      product:
+        name: 'Название'
+        description: 'Описание'
+        base_price_kopeks: 'Цена в копейках'
+        category_id: 'Категория'
+        category: 'Категория'
+      user:
+        email: 'Электронная почта'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        first_name: 'Имя'
+        last_name: 'Фамилия'

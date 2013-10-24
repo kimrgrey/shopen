@@ -6,7 +6,7 @@ en:
   site:
     sections:
       home: 'Home'
-      regisration: 'Registration'
+      registration: 'Registration'
       login: 'Login'
   admin:
     products:
@@ -28,8 +28,8 @@ en:
         home: 'Home'
       categories:
         categories: 'Categories'
-    topbar:
-      main:
+    navbar:
+      menu:
         home: 'Home'
         shop: 'Shop'
         account: 'Account'

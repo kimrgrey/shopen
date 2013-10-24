@@ -1,40 +1,16 @@
-%form.form-horizontal
+= simple_form_for resource, :as => resource_name, :url => registration_path(resource_name), html: {class: 'form-horizontal' } do |f|
   .row
     .span6
       = form_fieldset_header t('.account_info_title'), t('.account_info_description')
       %fieldset
-        .control-group
-          %label.control-label
-            %span.red *
-            Email:
-          .controls
-            %input.input-xlarge{type: "text"}
-        .control-group
-          %label.control-label
-            %span.red *
-            Password
-          .controls
-            %input.input-xlarge{type: "text"}
-        .control-group
-          %label.control-label
-            %span.red *
-            Confirmation
-          .controls
-            %input.input-xlarge{type: "text"}
+        = f.input :email, input_html: {class: 'input-xlarge'}
+        = f.input :password, input_html: {class: 'input-xlarge'}
+        = f.input :password_confirmation, input_html: {class: 'input-xlarge'}  
       = form_fieldset_header t('.personal_details_title'), t('.personal_details_description')
       %fieldset
-        .control-group
-          %label.control-label
-            First Name:
-          .controls
-            %input.input-xlarge{type: "text"}
-        .control-group
-          %label.control-label
-            Last Name:
-          .controls
-            %input.input-xlarge{type: "text"}
+        = f.input :first_name, input_html: {class: 'input-xlarge'}
+        = f.input :last_name, input_html: {class: 'input-xlarge'}
     .span6
       %img{src: image_path('product1.jpg')}
-    .clearfix
-    .form-actions
-      %input{type: 'submit', value: 'Create account', class: 'btn btn-success'}
+  .row.form-actions
+    = f.button :submit, t('.submit'), class: 'btn btn-success'

@@ -28,4 +28,5 @@ end
 group :development do 
   gem 'thin'
   gem 'therubyracer', platforms: :ruby
+  gem 'letter_opener'
 end

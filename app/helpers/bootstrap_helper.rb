@@ -18,7 +18,8 @@ module BootstrapHelper
         flash_messages << text if msg
       end
     end
-    flash_messages.join("\n").html_safe
+    
+    content_tag :div, content_tag(:div, content_tag(:div, raw(flash_messages.join("\n")), class: 'offset1 span10'), class: 'row'), class: 'container'
   end
 
   def breadcrumb(*opts)

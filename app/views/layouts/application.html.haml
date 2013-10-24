@@ -9,9 +9,7 @@
       = render partial: 'shared/menu/main'
       
     #maincontainer
-      .row
-        .offset2.span10
-          = bootstrap_flash
+      = bootstrap_flash if flash.any?
       = yield
 
     = render partial: 'shared/footer'

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  before_action :load_categories_for_menu, only: [:index, :show, :new, :edit]
+  before_action :load_categories_for_menu
 
   protected
 

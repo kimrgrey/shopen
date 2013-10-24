@@ -1,12 +1,16 @@
-%nav.nav-collapse.collapse{style: "height:0px"}
+%nav.nav-collapse.collapse
   %ul.nav
     %li
-      %a{href: root_path}= "Home"
-    %li
-      %a{href: "myaccount.html"}= "My Account"
-    %li
-      %a{href: admin_root_path}= "Admin"
-    %li
-      %a{href: "shopping-cart.html"}= "Shopping Cart"
-    %li
-      %a{href: "checkout.html"}= "Checkout"
+      = link_to t('.home'), root_path
+    - if user_signed_in?
+      %li
+        = link_to t('.account'), user_path
+      %li
+        = link_to t('.shop'), admin_root_path
+      %li
+        = link_to t('.sign_out'), destroy_user_session_path, :method => :delete
+    - else
+      %li
+        = link_to t('.sign_in'), new_user_session_path
+      %li
+        = link_to t('.sign_up'), new_user_registration_path

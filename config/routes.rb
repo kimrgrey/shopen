@@ -1,6 +1,9 @@
 Shopen::Application.routes.draw do
   scope "(:locale)", locale: /en|ru/ do
-    devise_for :users, controllers: {registrations: 'registrations'}
+    devise_for :users, :skip => [:registrations]
+    devise_scope :user do
+      resource :registration, only: [:new, :create], path: 'users', controller: 'devise/registrations', as: :user_registration
+    end
     
     namespace :admin do 
       resources :products

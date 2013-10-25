@@ -15,6 +15,11 @@ class ApplicationController < ActionController::Base
     @categories_for_menu.order(:name)
   end
 
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :first_name
+    devise_parameter_sanitizer.for(:sign_up) << :last_name
+  end
+
   private
 
   def default_url_options(options={})

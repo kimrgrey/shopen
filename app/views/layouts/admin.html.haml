@@ -6,6 +6,7 @@
     = render partial: 'shared/navbar/main'
 
     #maincontainer-admin
+      = bootstrap_flash if flash.any?
       = yield
 
     = render partial: 'shared/footer'

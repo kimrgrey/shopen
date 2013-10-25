@@ -15,8 +15,12 @@ en:
         new: 'New'
       new:
         page_header: 'New product'
+      create:
+        success: 'Congratulations! Product was successfully created!'
       edit:
         page_header: 'Edit product'
+      update:
+        success: 'Congratulations! Product was successfully saved!'
       form: 
         submit: 'Save'
         required_info_title: 'Required Information'
@@ -85,6 +89,7 @@ en:
         base_price_kopeks: 'Price in kopeks'
         category_id: 'Category'
         category: 'Category'
+        base_price: 'Price'
       user:
         email: 'Email'
         password: 'Password'

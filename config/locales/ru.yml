@@ -18,8 +18,12 @@ ru:
         new: 'Создать'
       new:
         page_header: 'Новый товар'
+      create:
+        success: 'Поздравляем! Товар был успешно создан!'
       edit:
         page_header: 'Редактирование товара'
+      update:
+        success: 'Поздравляем! Товар был успешно сохранен!'
       form: 
         submit: 'Сохранить'
         required_info_title: 'Базовая информация'
@@ -88,6 +92,7 @@ ru:
         base_price_kopeks: 'Цена в копейках'
         category_id: 'Категория'
         category: 'Категория'
+        base_price: 'Цена'
       user:
         email: 'Электронная почта'
         password: 'Пароль'

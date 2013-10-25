@@ -1,6 +1,6 @@
 Shopen::Application.routes.draw do
   scope "(:locale)", locale: /en|ru/ do
-    devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
+    devise_for :users, controllers: {registrations: 'registrations'}
     
     namespace :admin do 
       resources :products

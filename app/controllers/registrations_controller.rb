@@ -1,4 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
+
+  before_action :not_found, only: [:edit, :update, :destrory, :cancel]
   
   protected
 

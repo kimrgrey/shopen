@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+
   def load_categories_for_menu
     @categories_for_menu = Category.all
     @categories_for_menu.order(:name)

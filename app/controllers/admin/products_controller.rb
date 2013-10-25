@@ -6,6 +6,11 @@ class Admin::ProductsController < Admin::BaseController
     @products = @products.page(params[:page]).per(params[:per])
   end
 
+  def show 
+    @product = @products.find(params[:id])
+    @discounts = @product.discounts
+  end
+
   def new
     @categories = Category.all
     @product = @products.build

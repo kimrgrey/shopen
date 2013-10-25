@@ -9,10 +9,16 @@ en:
       registration: 'Registration'
       login: 'Login'
       account: 'Account'
+      admin: 'Shop'
+      products: 'Products'
   admin:
     products:
       index:
         new: 'New'
+      show:
+        page_header: 'Product Page'
+        info_tab_title: 'Product'
+        discounts_tab_title: 'Discounts'
       new:
         page_header: 'New product'
       create:

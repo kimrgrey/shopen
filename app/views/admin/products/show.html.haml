@@ -1,0 +1,8 @@
+.container
+  = breadcrumb [t('site.sections.admin'), admin_root_path], [t('site.sections.products'), admin_products_path], @product.name
+  = main_page_header t('.page_header')
+  = tabs 'presentation-tabs' do |t|
+    = t.tab 'info', t('.info_tab_title'), active: true do
+      = render partial: 'admin/products/info', locals: {product: @product}
+    = t.tab 'discounts', t('.discounts_tab_title') do
+      = render partial: 'admin/products/discounts', locals: {product: @product}

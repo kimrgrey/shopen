@@ -12,10 +12,16 @@ ru:
       registration: 'Регистрация'
       login: 'Вход'
       account: 'Аккаунт'
+      admin: 'Магазин'
+      products: 'Товары'
   admin:
     products:
       index:
         new: 'Создать'
+      show:
+        page_header: 'Карточка товара'
+        info_tab_title: 'Товар'
+        discounts_tab_title: 'Скидки'
       new:
         page_header: 'Новый товар'
       create:

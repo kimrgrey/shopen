@@ -59,4 +59,38 @@ module BootstrapHelper
     result += content_tag :div, content, :class => "tab-content"
     raw result
   end
+
+  class Carousel
+    attr_accessor :view
+    attr_accessor :counter
+
+    delegate :raw, :to => :view
+    delegate :content_tag, :to => :view
+
+    def initialize(view)
+      @counter = 0
+      @view = view
+    end
+
+    def item(url, name, description)
+      text = content_tag :div, raw(content_tag(:h4, name) + content_tag(:p, description)), class: 'carousel-caption'
+      image = content_tag :img, '', src: url
+      class_name = 'item'
+      class_name += ' active' if counter == 0
+      @counter += 1
+      content_tag :div, raw(image + text), class: class_name
+    end
+  end
+
+  def carousel(id, &block)
+    c = Carousel.new(self)
+    inner = content_tag :div, capture(c, &block), class: 'carousel-inner'
+    items = (0...c.counter).map { |x| content_tag :li, '', data: {'slide-to' => x, 'target' => "##{id}"}, class: ('active' if x == 0) }.join()
+    body = content_tag(:ol, raw(items), class: 'carousel-indicators') + inner
+    if c.counter > 1
+      body += content_tag :a, raw('&lsaquo;'), class: 'carousel-control left', data: {'slide' => 'prev'}, :href => "##{id}"
+      body += content_tag :a, raw('&rsaquo;'), class: 'carousel-control right', data: {'slide' => 'next'}, :href => "##{id}"
+    end
+    content_tag :div, raw(body), id: id, class: 'carousel slide'
+  end
 end

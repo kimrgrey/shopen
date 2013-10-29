@@ -1,9 +1,9 @@
 %li.dropdown
   %a.dropdown-toggle{href: "#", data: {toggle: "dropdown"}}
-    English
+    = t("languages.#{current_language}")
     %b.caret
   %ul.dropdown-menu
     %li
-      %a{href:"#"}= "English"
+      %a{href: url_for(locale: 'en')}= t('languages.en')
     %li
-      %a{href:"#"}= "Russian"
+      %a{href: url_for(locale: 'ru')}= t('languages.ru')

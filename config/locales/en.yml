@@ -3,6 +3,9 @@ en:
     name: 'Shopen'
     description: 'Social marketing platform'
     version: 'v2.0'
+  languages:
+    en: 'English'
+    ru: 'Russian'
   site:
     sections:
       home: 'Home'

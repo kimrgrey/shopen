@@ -6,6 +6,9 @@ ru:
     name: 'Shopen'
     description: 'Платформа для маркетинга в социальных сетях'
     version: 'Версия 2.0'
+  languages:
+    en: 'Английский'
+    ru: 'Русский'
   site:
     sections:
       home: 'Главная'

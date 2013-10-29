@@ -11,4 +11,8 @@ class Product < ActiveRecord::Base
   def has_discount?
     discounts.active.any?
   end
+
+  def has_photos?
+    photos.any?
+  end
 end

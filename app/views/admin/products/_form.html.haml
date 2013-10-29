@@ -10,6 +10,6 @@
       %fieldset
         = f.input :description, input_html: {class: 'input-xxlarge', rows: text_area_rows_count}
     .span4
-      %img{src: image_path('product1.jpg')}
+      = render partial: 'admin/products/photos'
   .row.form-actions
     = f.button :submit, t('.submit'), class: ['btn-success']

@@ -36,6 +36,7 @@ en:
         required_info_description: 'This information is required to create new product. Please, fill all fields below.'
         additional_details_title: 'Additional Details'
         additional_details_description: 'This information is optional, you can prodvide it later.'
+        add_photo: 'Upload new photo'
   users:
     show:
       page_header: 'Account Information'
